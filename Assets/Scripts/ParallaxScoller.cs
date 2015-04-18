@@ -4,7 +4,7 @@ using DG.Tweening;
 
 public class ParallaxScoller : MonoBehaviour 
 {
-    private Player player;
+    private Track track;
 
     public float scaling = 1;
 	
@@ -12,7 +12,7 @@ public class ParallaxScoller : MonoBehaviour
 
     void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        track = transform.root.GetComponent<Track>();// GameObject.FindGameObjectWithTag("Track").GetComponent<Player>();
     }
 
     void Start()
@@ -22,7 +22,6 @@ public class ParallaxScoller : MonoBehaviour
 
 	void Update () 
     {
-        transform.DOMoveX(startingPosition.x - player.distanceTravelled * scaling, .5f);
-        //transform.localPosition = new Vector3(startingPosition.x - player.distanceTravelled, transform.localPosition.y, transform.localPosition.z);
+        transform.DOMoveX(startingPosition.x - track.distanceTravelled * scaling, .5f);
 	}
 }

@@ -12,16 +12,22 @@ public class BushesContainer : MonoBehaviour
 
     private void Start()
     {
-        for (int i = -32; i <= 640; i += 32)
+        if (name == "ForegroundBushesContainer")
         {
-            Transform newSign = Instantiate(foregroundBushes, new Vector2(i, 0), Quaternion.identity) as Transform;
-            newSign.parent = transform;
+            for (int i = -32; i <= 640; i += 32)
+            {
+                Transform newSign = Instantiate(foregroundBushes, new Vector2(i, transform.position.y), Quaternion.identity) as Transform;
+                newSign.parent = transform;
+            }
         }
 
-        for (int i = -32; i <= 640; i += 32)
+        if (name == "BackgroundBushesContainer")
         {
-            Transform newSign = Instantiate(backgroundBushes, new Vector2(i - 0.5f, 0.1f), Quaternion.identity) as Transform;
-            newSign.parent = transform;
+            for (int i = -32; i <= 640; i += 32)
+            {
+                Transform newSign = Instantiate(backgroundBushes, new Vector2(i - 0.5f, transform.position.y + 0.1f), Quaternion.identity) as Transform;
+                newSign.parent = transform;
+            }
         }
     }
 }

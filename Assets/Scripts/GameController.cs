@@ -6,9 +6,11 @@ public class GameController : MonoBehaviour
 {
     private List<string> inputStrings;
 
+    public static int TrackDistance = 100;
+
     private void Awake()
     {
-        string[] tempInputArray = { 
+        string[] tempInputArray = {
             "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", 
             "A", "S", "D", "F", "G", "H", "J", "K", "L",
             "Z", "X", "C", "V", "B", "N", "M"   
@@ -29,6 +31,9 @@ public class GameController : MonoBehaviour
 
     public void ResetInputString(string key)
     {
-        inputStrings.Add(key);
+        if (key != null)
+        {
+            inputStrings.Add(key);
+        }
     }
 }

@@ -38,6 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 4272076545
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Bushes
+    uniqueID: 18326011
+    locked: 0
+  - name: Foreground
+    uniqueID: 4081996977
+    locked: 0
+  - name: Signs
+    uniqueID: 460641645
     locked: 0

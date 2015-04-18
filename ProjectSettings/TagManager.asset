@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Track
+  - Track1
+  - Track2
+  - Track3
+  - Track4
+  - Track1Slider
+  - Track2Slider
+  - Track3Slider
+  - Track4Slider
   layers:
   - Default
   - TransparentFX

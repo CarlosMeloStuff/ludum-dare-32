@@ -8,6 +8,8 @@ public class GameController : MonoBehaviour
 
     public static int TrackDistance = 100;
 
+    public static int NumberOfPlayers = 2;
+
     private void Awake()
     {
         string[] tempInputArray = {
@@ -17,6 +19,20 @@ public class GameController : MonoBehaviour
         };
 
         inputStrings = new List<string>(tempInputArray);
+
+        for (int i = 0; i < 4; i++)
+        {
+            if (i >= GameController.NumberOfPlayers)
+            {
+                GameObject track = GameObject.FindGameObjectWithTag("Track" + (i + 1).ToString());
+                track.SetActive(false);
+
+                GameObject trackSlider = GameObject.FindGameObjectWithTag("Track" + (i + 1).ToString() + "Slider");
+                trackSlider.SetActive(false);
+
+                track.GetComponent<Track>().travelTimeText.enabled = false;
+            }
+        }
     }
 
     public string GetInputString()

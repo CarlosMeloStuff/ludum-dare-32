@@ -3,8 +3,32 @@ using System.Collections;
 
 public class ButtonHelper : MonoBehaviour 
 {
-	public void LoadScene(string scene)
+    public void Load1PlayerRace()
     {
-        Application.LoadLevel(scene);
+        GameController.NumberOfPlayers = 1;
+        LoadRaceScene();
+    }
+
+    public void Load2PlayerRace()
+    {
+        GameController.NumberOfPlayers = 2;
+        LoadRaceScene();
+    }
+
+    public void Load3PlayerRace()
+    {
+        GameController.NumberOfPlayers = 3;
+        LoadRaceScene();
+    }
+
+    public void Load4PlayerRace()
+    {
+        GameController.NumberOfPlayers = 4;
+        LoadRaceScene();
+    }
+
+	public void LoadRaceScene()
+    {
+        Application.LoadLevel("Race");
     }
 }

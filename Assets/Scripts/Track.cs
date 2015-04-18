@@ -21,6 +21,14 @@ public class Track : MonoBehaviour
     [SerializeField]
     private Transform signs;
 
+    [SerializeField]
+    public Text travelTimeText;
+
+    private float travelTime = 0f;
+
+    public Sprite largeSprite;
+    public Sprite smallSprite;
+
     private string leftKey;
     private string rightKey;
     private string nextKey;
@@ -42,6 +50,10 @@ public class Track : MonoBehaviour
 
     private void Start()
     {
+        transform.FindChild("Player").GetComponent<SpriteRenderer>().sprite = largeSprite;
+
+        travelTimeText.text = travelTime.ToString("0.00");
+
         StartCoroutine(ReassignKeys());
     }
 
@@ -83,6 +95,12 @@ public class Track : MonoBehaviour
 	void Update () 
     {
         CheckKeys();
+
+        if (moveable)
+        {
+            travelTime += Time.deltaTime;
+            travelTimeText.text = travelTime.ToString("0.00");
+        }
 	}
 
     private void CheckKeys()

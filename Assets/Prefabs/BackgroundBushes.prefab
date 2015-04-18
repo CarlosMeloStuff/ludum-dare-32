@@ -472,6 +472,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 463036}
+  - 114: {fileID: 11449106}
   m_Layer: 0
   m_Name: BackgroundBushes
   m_TagString: Untagged
@@ -984,6 +985,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 463036}
   m_RootOrder: 10
+--- !u!114 &11449106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72470c978eb26554bb3e50771e13e2f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaling: .5
 --- !u!212 &21202834
 SpriteRenderer:
   m_ObjectHideFlags: 1

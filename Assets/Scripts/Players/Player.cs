@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     private Text rightInputText;
 
     [SerializeField]
-    private float distanceTravelled = 0f;
+    public float distanceTravelled = 0f;
 
     [SerializeField]
     private Transform signs;

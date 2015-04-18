@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 5d3428c0993eb1a408c62df7f583429f
-timeCreated: 1429361912
+timeCreated: 1429366865
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,6 +10,7 @@ TextureImporter:
     21300006: environment_3
     21300008: environment_4
     21300010: environment_5
+    21300012: environment_6
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -109,6 +110,16 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: environment_6
+      rect:
+        serializedVersion: 2
+        x: 96
         y: 0
         width: 16
         height: 16

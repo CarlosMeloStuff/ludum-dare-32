@@ -39,7 +39,7 @@ public class Track : MonoBehaviour
 
     private Transform playerCanvas;
 
-    private bool moveable = true;
+    public bool moveable = true;
 
     private void Awake()
     {

@@ -13,6 +13,7 @@ TagManager:
   - Track2Slider
   - Track3Slider
   - Track4Slider
+  - GameOverPanel
   layers:
   - Default
   - TransparentFX

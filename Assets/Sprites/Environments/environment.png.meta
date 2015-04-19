@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 5d3428c0993eb1a408c62df7f583429f
-timeCreated: 1429375074
+timeCreated: 1429397635
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -62,8 +62,8 @@ TextureImporter:
     - name: environment_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 1
+        y: 1
         width: 16
         height: 16
       alignment: 7
@@ -72,8 +72,8 @@ TextureImporter:
     - name: environment_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
+        x: 19
+        y: 1
         width: 16
         height: 16
       alignment: 7
@@ -82,8 +82,8 @@ TextureImporter:
     - name: environment_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
+        x: 37
+        y: 1
         width: 16
         height: 16
       alignment: 7
@@ -92,8 +92,8 @@ TextureImporter:
     - name: environment_3
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
+        x: 55
+        y: 1
         width: 16
         height: 16
       alignment: 7
@@ -102,8 +102,8 @@ TextureImporter:
     - name: environment_4
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
+        x: 73
+        y: 1
         width: 16
         height: 16
       alignment: 7
@@ -112,8 +112,8 @@ TextureImporter:
     - name: environment_5
       rect:
         serializedVersion: 2
-        x: 80
-        y: 0
+        x: 91
+        y: 1
         width: 16
         height: 16
       alignment: 7
@@ -122,8 +122,8 @@ TextureImporter:
     - name: environment_6
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
+        x: 109
+        y: 1
         width: 16
         height: 16
       alignment: 7
@@ -132,8 +132,8 @@ TextureImporter:
     - name: environment_7
       rect:
         serializedVersion: 2
-        x: 112
-        y: 0
+        x: 127
+        y: 1
         width: 16
         height: 16
       alignment: 7
@@ -142,8 +142,8 @@ TextureImporter:
     - name: environment_8
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
+        x: 145
+        y: 1
         width: 16
         height: 16
       alignment: 7
@@ -152,8 +152,8 @@ TextureImporter:
     - name: environment_9
       rect:
         serializedVersion: 2
-        x: 144
-        y: 0
+        x: 163
+        y: 1
         width: 16
         height: 16
       alignment: 7

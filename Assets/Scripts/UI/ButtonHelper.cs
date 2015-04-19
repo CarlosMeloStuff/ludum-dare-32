@@ -27,8 +27,23 @@ public class ButtonHelper : MonoBehaviour
         LoadRaceScene();
     }
 
+    public void RestartScene()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+    }
+
+    public void LoadScene(string scene)
+    {
+        Application.LoadLevel(scene);
+    }
+
 	public void LoadRaceScene()
     {
-        Application.LoadLevel("Race");
+        LoadScene("Race");
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }

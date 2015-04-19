@@ -7,10 +7,15 @@ public class Castle : MonoBehaviour
 
     private Track track;
 
+    private AudioSource audioSource;
+
+    private bool destroyed = false;
+
 	void Awake() 
     {
         animator = GetComponent<Animator>();
-	}
+	    audioSource = GetComponent<AudioSource>();
+    }
 
     void Start()
     {
@@ -19,9 +24,11 @@ public class Castle : MonoBehaviour
 
 	void Update () 
     {
-        if (track.distanceTravelled >= GameController.TrackDistance)
+        if (track.distanceTravelled >= GameController.TrackDistance && !destroyed)
         {
             animator.SetBool("Destroyed", true);
+            audioSource.Play();
+            destroyed = true;
         }
 	}
 }

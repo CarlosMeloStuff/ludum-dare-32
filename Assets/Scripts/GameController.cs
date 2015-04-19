@@ -10,6 +10,8 @@ public class GameController : MonoBehaviour
 
     public static int NumberOfPlayers = 2;
 
+    private GameObject gameOverPanel;
+
     private void Awake()
     {
         string[] tempInputArray = {
@@ -33,6 +35,9 @@ public class GameController : MonoBehaviour
                 track.GetComponent<Track>().travelTimeText.enabled = false;
             }
         }
+
+        gameOverPanel = GameObject.FindGameObjectWithTag("GameOverPanel");
+        gameOverPanel.SetActive(false);
     }
 
     public string GetInputString()
@@ -50,6 +55,26 @@ public class GameController : MonoBehaviour
         if (key != null)
         {
             inputStrings.Add(key);
+        }
+    }
+
+    private void Update()
+    {
+        bool allPlayersComplete = true;
+
+        for (int i = 0; i < GameController.NumberOfPlayers; i++)
+        {
+            Track track = GameObject.FindGameObjectWithTag("Track" + (i + 1).ToString()).GetComponent<Track>();
+            
+            if (track.moveable)
+            {
+                allPlayersComplete = false;
+            }
+        }
+
+        if (allPlayersComplete)
+        {
+            gameOverPanel.SetActive(true);
         }
     }
 }

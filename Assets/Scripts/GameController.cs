@@ -37,7 +37,7 @@ public class GameController : MonoBehaviour
                 GameObject trackSlider = GameObject.FindGameObjectWithTag("Track" + (i + 1).ToString() + "Slider");
                 trackSlider.SetActive(false);
 
-                track.GetComponent<Track>().travelTimeText.enabled = false;
+                track.GetComponent<Track>().travelTimeText.color = new Color(1f, 1f, 1f, 0f);
             }
         }
 

@@ -179,7 +179,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 46}
+  m_SizeDelta: {x: 0, y: 48}
   m_Pivot: {x: .5, y: 0}
 --- !u!114 &12584045
 MonoBehaviour:
@@ -193,9 +193,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .941176474, g: .332179904, b: .332179904, a: 1}
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Color: {r: 1, g: .475321174, b: .239215732, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 132966063f1f12f4288dbbb283402420, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -925,6 +925,7 @@ MonoBehaviour:
   largeSprite: {fileID: 21300006, guid: 57ea6c457ca81204399150cb829d48e3, type: 3}
   smallSprite: {fileID: 21300006, guid: 62debe2c3c9d633499b5ac664d672912, type: 3}
   moveable: 1
+  deactivated: 0
 --- !u!1 &209321906
 GameObject:
   m_ObjectHideFlags: 0
@@ -2846,7 +2847,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Restart
+  m_Text: Restart (R)
 --- !u!222 &665309336
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4193,6 +4194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21a96c074556c2040a6f6743a03e1a6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sleepyRat: {fileID: 21300008, guid: 57ea6c457ca81204399150cb829d48e3, type: 3}
 --- !u!4 &1027539918
 Transform:
   m_ObjectHideFlags: 0
@@ -4939,6 +4941,7 @@ MonoBehaviour:
   largeSprite: {fileID: 21300002, guid: 57ea6c457ca81204399150cb829d48e3, type: 3}
   smallSprite: {fileID: 21300002, guid: 62debe2c3c9d633499b5ac664d672912, type: 3}
   moveable: 1
+  deactivated: 0
 --- !u!1 &1190648208
 GameObject:
   m_ObjectHideFlags: 0
@@ -5975,6 +5978,7 @@ MonoBehaviour:
   largeSprite: {fileID: 21300000, guid: 57ea6c457ca81204399150cb829d48e3, type: 3}
   smallSprite: {fileID: 21300000, guid: 62debe2c3c9d633499b5ac664d672912, type: 3}
   moveable: 1
+  deactivated: 0
 --- !u!1 &1457199297
 GameObject:
   m_ObjectHideFlags: 0
@@ -8431,6 +8435,7 @@ MonoBehaviour:
   largeSprite: {fileID: 21300004, guid: 57ea6c457ca81204399150cb829d48e3, type: 3}
   smallSprite: {fileID: 21300004, guid: 62debe2c3c9d633499b5ac664d672912, type: 3}
   moveable: 1
+  deactivated: 0
 --- !u!1 &2064997606
 GameObject:
   m_ObjectHideFlags: 0

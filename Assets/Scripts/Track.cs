@@ -41,6 +41,8 @@ public class Track : MonoBehaviour
 
     public bool moveable = true;
 
+    public bool deactivated = false;
+
     private void Awake()
     {
         gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
@@ -50,7 +52,14 @@ public class Track : MonoBehaviour
 
     private void Start()
     {
-        transform.FindChild("Player").GetComponent<SpriteRenderer>().sprite = largeSprite;
+        if (deactivated)
+        {
+            transform.FindChild("Player").GetComponent<SpriteRenderer>().sprite = gameController.sleepyRat;
+        }
+        else
+        {
+            transform.FindChild("Player").GetComponent<SpriteRenderer>().sprite = largeSprite;
+        }
 
         travelTimeText.text = travelTime.ToString("0.00");
 
@@ -87,9 +96,15 @@ public class Track : MonoBehaviour
             rightInputText.fontSize = 8;
         }
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(6f);
 
         StartCoroutine(ReassignKeys());
+    }
+
+    public void Deactivate()
+    {
+        moveable = false;
+        deactivated = true;
     }
 
 	void Update () 
@@ -101,6 +116,14 @@ public class Track : MonoBehaviour
             travelTime += Time.deltaTime;
             travelTimeText.text = travelTime.ToString("0.00");
         }
+
+        if (deactivated)
+        {
+            moveable = false;
+            playerCanvas.gameObject.SetActive(false);
+            signs.gameObject.SetActive(false);
+        }
+        
 	}
 
     private void CheckKeys()

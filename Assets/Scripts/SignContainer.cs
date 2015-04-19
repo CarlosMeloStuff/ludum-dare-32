@@ -16,7 +16,7 @@ public class SignContainer : MonoBehaviour
         {
             Transform newSign = Instantiate(sign, new Vector2(i, transform.position.y), Quaternion.identity) as Transform;
 
-            newSign.GetComponent<Sign>().text = i == 0 ? "GO" : i.ToString() + "M";
+            newSign.GetComponent<Sign>().text = i == 0 ? "GO!" : i.ToString() + "M";
 
             newSign.parent = transform;
         }

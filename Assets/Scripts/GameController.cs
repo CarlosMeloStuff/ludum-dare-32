@@ -6,14 +6,19 @@ public class GameController : MonoBehaviour
 {
     private List<string> inputStrings;
 
-    public static int TrackDistance = 100;
+    public static int TrackDistance = 150;
 
-    public static int NumberOfPlayers = 4;
+    public static int NumberOfPlayers = 2;
 
     private GameObject gameOverPanel;
 
+    [SerializeField]
+    public Sprite sleepyRat;
+
     private void Awake()
     {
+        Time.timeScale = 1;
+
         string[] tempInputArray = {
             "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", 
             "A", "S", "D", "F", "G", "H", "J", "K", "L",
@@ -27,7 +32,7 @@ public class GameController : MonoBehaviour
             if (i >= GameController.NumberOfPlayers)
             {
                 GameObject track = GameObject.FindGameObjectWithTag("Track" + (i + 1).ToString());
-                track.SetActive(false);
+                track.GetComponent<Track>().Deactivate();
 
                 GameObject trackSlider = GameObject.FindGameObjectWithTag("Track" + (i + 1).ToString() + "Slider");
                 trackSlider.SetActive(false);
@@ -75,6 +80,28 @@ public class GameController : MonoBehaviour
         if (allPlayersComplete)
         {
             gameOverPanel.SetActive(true);
+        }
+
+        if (!allPlayersComplete && Input.GetKeyUp(KeyCode.Escape))
+        {
+            if (gameOverPanel.activeSelf)
+            {
+                gameOverPanel.SetActive(false);
+                Time.timeScale = 1;
+            }
+            else 
+            {
+                gameOverPanel.SetActive(true);
+                Time.timeScale = 0;
+            }
+        }
+
+        if (gameOverPanel.activeSelf)
+        {
+            if (Input.GetKeyUp(KeyCode.R))
+            {
+                Application.LoadLevel(Application.loadedLevel);
+            }
         }
     }
 }

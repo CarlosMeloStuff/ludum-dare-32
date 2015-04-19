@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
 
     public static int TrackDistance = 100;
 
-    public static int NumberOfPlayers = 2;
+    public static int NumberOfPlayers = 4;
 
     private GameObject gameOverPanel;
 

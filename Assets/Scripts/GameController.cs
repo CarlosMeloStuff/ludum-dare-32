@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour
 {
     private List<string> inputStrings;
 
-    public static int TrackDistance = 150;
+    public static int TrackDistance = 25;
 
     public static int NumberOfPlayers = 2;
 

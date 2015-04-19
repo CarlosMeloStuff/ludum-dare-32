@@ -53,4 +53,14 @@ public class ButtonHelper : MonoBehaviour
             Application.Quit();
         }
     }
+
+    public void PlaySound(AudioClip clickClip)
+    {
+        AudioSource audioSource = GetComponent<AudioSource>();
+
+        if (audioSource)
+        {
+            audioSource.PlayOneShot(clickClip);
+        }
+    }
 }

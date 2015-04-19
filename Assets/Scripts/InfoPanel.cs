@@ -8,7 +8,6 @@ public class InfoPanel : MonoBehaviour
 	
     public void Show()
     {
-        Debug.Log(gameObject);
         mainMenuPanel.gameObject.SetActive(false);
         gameObject.SetActive(true);
     }

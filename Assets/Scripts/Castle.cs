@@ -11,6 +11,9 @@ public class Castle : MonoBehaviour
 
     private bool destroyed = false;
 
+    [SerializeField]
+    private AudioClip explosion;
+
 	void Awake() 
     {
         animator = GetComponent<Animator>();
@@ -28,6 +31,8 @@ public class Castle : MonoBehaviour
         {
             animator.SetBool("Destroyed", true);
             audioSource.Play();
+            audioSource.PlayOneShot(explosion);
+
             destroyed = true;
         }
 	}

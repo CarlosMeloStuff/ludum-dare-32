@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 62debe2c3c9d633499b5ac664d672912
-timeCreated: 1429384186
+timeCreated: 1429402041
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -58,18 +58,18 @@ TextureImporter:
     - name: Tiny_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 1
+        y: 1
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Tiny_1
       rect:
         serializedVersion: 2
-        x: 8
-        y: 0
+        x: 11
+        y: 1
         width: 8
         height: 8
       alignment: 0
@@ -78,8 +78,8 @@ TextureImporter:
     - name: Tiny_2
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
+        x: 21
+        y: 1
         width: 8
         height: 8
       alignment: 0
@@ -88,8 +88,8 @@ TextureImporter:
     - name: Tiny_3
       rect:
         serializedVersion: 2
-        x: 24
-        y: 0
+        x: 31
+        y: 1
         width: 8
         height: 8
       alignment: 0
@@ -98,8 +98,8 @@ TextureImporter:
     - name: Tiny_4
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
+        x: 41
+        y: 1
         width: 8
         height: 8
       alignment: 0
@@ -108,8 +108,8 @@ TextureImporter:
     - name: Tiny_5
       rect:
         serializedVersion: 2
-        x: 40
-        y: 0
+        x: 51
+        y: 1
         width: 8
         height: 8
       alignment: 0

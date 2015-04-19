@@ -6,21 +6,29 @@ public class GameController : MonoBehaviour
 {
     private List<string> inputStrings;
 
-    public static int TrackDistance = 25;
+    public static int TrackDistance = 150;
 
     public static int NumberOfPlayers = 2;
+
+    public static bool switchKeys = true;
 
     private GameObject gameOverPanel;
 
     [SerializeField]
     public Sprite sleepyRat;
 
+    public float startDelay = 2f;
+
+    private AudioSource audioSource;
+
+    public bool allplayersFinished = false;
+
     private void Awake()
     {
         Time.timeScale = 1;
 
         string[] tempInputArray = {
-            "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", 
+            "Q", "W", "E", "T", "Y", "U", "I", "O", "P", 
             "A", "S", "D", "F", "G", "H", "J", "K", "L",
             "Z", "X", "C", "V", "B", "N", "M"   
         };
@@ -43,6 +51,26 @@ public class GameController : MonoBehaviour
 
         gameOverPanel = GameObject.FindGameObjectWithTag("GameOverPanel");
         gameOverPanel.SetActive(false);
+
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    private void StartTracks()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            if (i < GameController.NumberOfPlayers)
+            {
+                GameObject track = GameObject.FindGameObjectWithTag("Track" + (i + 1).ToString());
+                track.GetComponent<Track>().AllowMovement();
+            }
+        }
+    }
+
+    public void StartGame()
+    {
+        audioSource.Play();
+        StartTracks();
     }
 
     public string GetInputString()
@@ -80,6 +108,7 @@ public class GameController : MonoBehaviour
         if (allPlayersComplete)
         {
             gameOverPanel.SetActive(true);
+            allplayersFinished = true;
         }
 
         if (!allPlayersComplete && Input.GetKeyUp(KeyCode.Escape))

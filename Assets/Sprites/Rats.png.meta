@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 57ea6c457ca81204399150cb829d48e3
-timeCreated: 1429411905
+timeCreated: 1429458276
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -9,6 +9,9 @@ TextureImporter:
     21300004: Rats_2
     21300006: Rats_3
     21300008: Rats_4
+    21300010: Rats_5
+    21300012: Rats_6
+    21300014: Rats_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -98,6 +101,36 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rats_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rats_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rats_7
+      rect:
+        serializedVersion: 2
+        x: 224
         y: 0
         width: 32
         height: 32

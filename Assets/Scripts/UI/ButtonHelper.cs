@@ -5,24 +5,64 @@ public class ButtonHelper : MonoBehaviour
 {
     public void Load1PlayerRace()
     {
+        GameController.switchKeys = true;
+        GameController.TrackDistance = 150;
         GameController.NumberOfPlayers = 1;
         LoadRaceScene();
     }
 
     public void Load2PlayerRace()
     {
+        GameController.switchKeys = true;
+        GameController.TrackDistance = 150;
         GameController.NumberOfPlayers = 2;
         LoadRaceScene();
     }
 
     public void Load3PlayerRace()
     {
+        GameController.switchKeys = true;
+        GameController.TrackDistance = 150;
         GameController.NumberOfPlayers = 3;
         LoadRaceScene();
     }
 
     public void Load4PlayerRace()
     {
+        GameController.switchKeys = true;
+        GameController.TrackDistance = 150;
+        GameController.NumberOfPlayers = 4;
+        LoadRaceScene();
+    }
+
+    public void Load1PlayerMarathon()
+    {
+        GameController.switchKeys = false;
+        GameController.TrackDistance = 1000;
+        GameController.NumberOfPlayers = 1;
+        LoadRaceScene();
+    }
+
+    public void Load2PlayerMarathon()
+    {
+        GameController.switchKeys = false;
+        GameController.TrackDistance = 1000;
+        GameController.NumberOfPlayers = 2;
+        LoadRaceScene();
+    }
+
+    public void Load3PlayerMarathon()
+    {
+        GameController.switchKeys = false;
+        GameController.TrackDistance = 1000;
+        GameController.NumberOfPlayers = 3;
+        LoadRaceScene();
+    }
+
+    public void Load4PlayerMarathon()
+    {
+        GameController.switchKeys = false;
+        GameController.TrackDistance = 1000;
         GameController.NumberOfPlayers = 4;
         LoadRaceScene();
     }

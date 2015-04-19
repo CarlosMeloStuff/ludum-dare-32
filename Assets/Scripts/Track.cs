@@ -28,6 +28,7 @@ public class Track : MonoBehaviour
 
     public Sprite largeSprite;
     public Sprite smallSprite;
+    public Sprite sleepySprite;
 
     private string leftKey;
     private string rightKey;
@@ -39,22 +40,29 @@ public class Track : MonoBehaviour
 
     private Transform playerCanvas;
 
+    [NonSerialized]
     public bool moveable = true;
 
     public bool deactivated = false;
+
+    [NonSerialized]
+    public bool started = false;
+
+    private AudioSource audioSource;
 
     private void Awake()
     {
         gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         playerTransform = transform.FindChild("Player");
         playerCanvas = transform.FindChild("Canvas");
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Start()
     {
         if (deactivated)
         {
-            transform.FindChild("Player").GetComponent<SpriteRenderer>().sprite = gameController.sleepyRat;
+            transform.FindChild("Player").GetComponent<SpriteRenderer>().sprite = sleepySprite;
         }
         else
         {
@@ -63,10 +71,23 @@ public class Track : MonoBehaviour
 
         travelTimeText.text = travelTime.ToString("0.00");
 
-        StartCoroutine(ReassignKeys());
+        AssignKeys();
     }
 
     private IEnumerator ReassignKeys()
+    {
+        yield return new WaitForSeconds(6f);
+
+        if (name == "Track1" && !gameController.allplayersFinished)
+        {
+            audioSource.Play();
+        }
+        AssignKeys();
+
+        StartCoroutine(ReassignKeys());
+    }
+
+    public void AssignKeys()
     {
         bool rightKeyNext = nextKey == rightKey;
 
@@ -95,10 +116,6 @@ public class Track : MonoBehaviour
             leftInputText.fontSize = 10;
             rightInputText.fontSize = 8;
         }
-
-        yield return new WaitForSeconds(6f);
-
-        StartCoroutine(ReassignKeys());
     }
 
     public void Deactivate()
@@ -107,14 +124,24 @@ public class Track : MonoBehaviour
         deactivated = true;
     }
 
+    public void AllowMovement()
+    {
+        started = true;
+
+        if (GameController.switchKeys)
+        {
+            StartCoroutine(ReassignKeys());
+        }
+    }
+
 	void Update () 
     {
-        CheckKeys();
-
-        if (moveable)
+        if (moveable && started)
         {
             travelTime += Time.deltaTime;
             travelTimeText.text = travelTime.ToString("0.00");
+
+            CheckKeys();
         }
 
         if (deactivated)

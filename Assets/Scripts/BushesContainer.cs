@@ -14,7 +14,7 @@ public class BushesContainer : MonoBehaviour
     {
         if (name == "ForegroundBushesContainer")
         {
-            for (int i = -32; i <= 640; i += 32)
+            for (int i = -32; i <= 1500; i += 32)
             {
                 Transform newSign = Instantiate(foregroundBushes, new Vector2(i, transform.position.y), Quaternion.identity) as Transform;
                 newSign.parent = transform;
@@ -23,7 +23,7 @@ public class BushesContainer : MonoBehaviour
 
         if (name == "BackgroundBushesContainer")
         {
-            for (int i = -32; i <= 640; i += 32)
+            for (int i = -32; i <= 1500; i += 32)
             {
                 Transform newSign = Instantiate(backgroundBushes, new Vector2(i - 0.5f, transform.position.y + 0.1f), Quaternion.identity) as Transform;
                 newSign.parent = transform;
